@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-11-21",
+  "environment": {
+    "os": "Linux 7.0.0-44-generic",
+    "arch": "x64",
+    "node": "v24.22.1",
+    "cpus": "AMD EPYC 9D25 126-Core Processor"
+  },
+  "commit": "8f78b0349b01a0efd5a4c5056ff90771db1350f7",
+  "results": [
+    {
+      "name": "rag.selectDiverse-1000hits-k20",
+      "scope": "packages/rag/src/diversify.ts selectDiverse() — 1000 hits, k=20, perDocument=4",
+      "warmup": 200,
+      "iterations": 2000,
+      "medianMs": 0.04398,
+      "p95Ms": 0.10488,
+      "meanMs": 0.10201,
+      "opsPerSec": 22737
+    },
+    {
+      "name": "sdk.normalizeAssistantCacheContent-4kb",
+      "scope": "packages/sdk/src/utils/cache-normalize.ts normalizeAssistantCacheContent() — ~4KB with think blocks",
+      "warmup": 500,
+      "iterations": 5000,
+      "medianMs": 0.00355,
+      "p95Ms": 0.00821,
+      "meanMs": 0.00423,
+      "opsPerSec": 282030
+    },
+    {
+      "name": "sdk.sanitizePathComponent+checkPathWithinBase",
+      "scope": "packages/sdk/src/utils/path-sanitize.ts sanitizePathComponent()+checkPathWithinBase() — 5 fixed inputs",
+      "warmup": 1000,
+      "iterations": 10000,
+      "medianMs": 0.00744,
+      "p95Ms": 0.01462,
+      "meanMs": 0.02022,
+      "opsPerSec": 134330
+    }
+  ]
+}
